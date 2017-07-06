@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="goldfish_feature.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="OzN-kI-gvh">
+                                <rect key="frame" x="33" y="137" width="254" height="172"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="172" id="azL-kP-yTd"/>
+                                    <constraint firstAttribute="width" constant="254" id="rdX-2f-nYV"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R89-47-rpF">
+                                <rect key="frame" x="156" y="219" width="8" height="8"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="8" id="OeQ-Lg-8H6"/>
+                                    <constraint firstAttribute="width" constant="8" id="iNJ-vn-hba"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ODW-Za-zPh">
+                                <rect key="frame" x="80" y="420" width="8" height="8"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="8" id="Bow-eL-t4u"/>
+                                    <constraint firstAttribute="height" constant="8" id="QWD-8Q-llx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="OzN-kI-gvh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="117" id="6Iq-xd-3tH"/>
+                            <constraint firstItem="R89-47-rpF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="156" id="NdW-Ht-2Tr"/>
+                            <constraint firstItem="R89-47-rpF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="199" id="ZYS-G6-NSK"/>
+                            <constraint firstItem="ODW-Za-zPh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="420" id="dNK-yK-MyV"/>
+                            <constraint firstItem="OzN-kI-gvh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="33" id="nbN-I5-vNZ"/>
+                            <constraint firstItem="ODW-Za-zPh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="80" id="ulj-Gu-ABE"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="zSM-Xb-obd" appends="YES" id="vRn-g2-BUw"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="blueSquare" destination="ODW-Za-zPh" id="30m-qJ-eed"/>
+                        <outlet property="imageView" destination="OzN-kI-gvh" id="dEf-93-qRC"/>
+                        <outlet property="redSquare" destination="R89-47-rpF" id="A86-gP-nka"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="zSM-Xb-obd">
+                    <connections>
+                        <action selector="handleAttachmentGesture:" destination="BYZ-38-t0r" id="DU5-GV-Toc"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="goldfish_feature.jpg" width="300" height="191"/>
+    </resources>
+</document>
