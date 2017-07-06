@@ -45,6 +45,13 @@ enum Theme: Int {
     UINavigationBar.appearance().backIndicatorImage = UIImage(named: "backArrow")
     UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage(named: "backArrowMaskFixed")
 
+    UITabBar.appearance().barStyle = barStyle
+    UITabBar.appearance().backgroundImage = tabbarBackgroundImage
+    
+    let tabIndicator = UIImage(named: "tabBarSelectionIndicator")?.withRenderingMode(.alwaysTemplate)
+    let tabResizableIndicator = tabIndicator?.resizableImage(withCapInsets: UIEdgeInsetsMake(0, 2.0, 0, 2.0))
+    UITabBar.appearance().selectionIndicatorImage = tabResizableIndicator
+    
   }
   
   var barStyle: UIBarStyle {
@@ -59,5 +66,10 @@ enum Theme: Int {
   var navigationBackgroundImage: UIImage? {
     return self == .graphical ? UIImage(named: "navBackground") : nil
   }
+  
+  var tabbarBackgroundImage: UIImage? {
+    return self == .graphical ? UIImage(named: "tabBarBackground") : nil
+  }
+		
   
 }
